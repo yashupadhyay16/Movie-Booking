@@ -1,10 +1,11 @@
 require_relative 'booking'
+require 'securerandom'
 
 class Movie
   attr_reader :id, :title, :genre, :show_timings, :total_seats, :available_seats
 
-  def initialize(id, title, genre, show_timings, total_seats)
-    @id = id
+  def initialize(title, genre, show_timings, total_seats)
+    @id = SecureRandom.uuid
     @title = title
     @genre = genre
     @show_timings = show_timings

@@ -1,6 +1,6 @@
 require 'securerandom'
 class Booking
-  attr_reader :movie_id, :id, :show_id
+  attr_reader :movie_id, :id, :show_id, :seat_number
 
   def initialize(movie_id:, show_id:, seat_number:)
     @id = SecureRandom.uuid
